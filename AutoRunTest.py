@@ -1,7 +1,7 @@
 import gspread, time
 from google.oauth2.service_account import Credentials
 
-p = "C:\\Users\\kingc\\OneDrive\\Documents\\Code\\TicketScrape\\tickets-Cred.json"
+p = "C:\\Users\\kingc\\OneDrive\\Documents\\Code\\tickets-Cred.json"
 
 creds = Credentials.from_service_account_file(p , scopes=["https://www.googleapis.com/auth/spreadsheets"])
 client = gspread.authorize(creds)
