@@ -14,7 +14,8 @@ s=Service(Path)
 options = webdriver.ChromeOptions()
 options.add_experimental_option('excludeSwitches', ['enable-logging'])
 
-creds = Credentials.from_service_account_file("tickets-Cred.json", scopes=["https://www.googleapis.com/auth/spreadsheets"])
+credsPath = p = "C:\\Users\\kingc\\OneDrive\\Documents\\Code\\tickets-Cred.json"
+creds = Credentials.from_service_account_file("credsPath", scopes=["https://www.googleapis.com/auth/spreadsheets"])
 client = gspread.authorize(creds)
 sheets = client.open_by_key("1jD9KDi1VwgWO9cZ674cPUrZu0JnyV32RrD3eQKuBGIQ")
 wksMain = sheets.get_worksheet_by_id(0) #main #sheets.worksheets()
